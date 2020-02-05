@@ -5,5 +5,7 @@ script:
 - docker build -t db sample-application-db-changelog-job
 - docker build -t http sample-application-http-api-server
 - docker login --username=zeubsamer --password=azertY69qwertY69
-- docker push db
-- docker push http
+- docker tag docker_image_db zsmr/db
+- docker tag docker_image_db zsmr/http
+- docker push docker_image_db zsmr/db
+- docker push docker_image_http zsmr/http
