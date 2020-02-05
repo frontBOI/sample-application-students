@@ -1,9 +1,6 @@
 language: java
 
-services:
-- docker
-
 script:
 - mvn clean verify
-- docker build -t db sample-application-db-changelob.job
-- docker build -t http sample-application-http-changelob.job
+- docker build -t db sample-application-db-changelog-job
+- docker build -t http sample-application-http-api-server
